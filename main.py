@@ -1,8 +1,14 @@
 from book import BookManager
 from user import UserManager
-from check import CheckoutManager
+from checkout import CheckoutManager
 
 def main_menu():
+    """
+    Displays the main menu options.
+
+    Returns:
+        str: The user's choice.
+    """
     print("\nLibrary Management System")
     print("1. Add Book")
     print("2. List Books")
@@ -14,6 +20,9 @@ def main_menu():
     return choice
 
 def main():
+    """
+    The main function to run the library management system.
+    """
     book_manager = BookManager('books.json')
     user_manager = UserManager('users.json')
     checkout_manager = CheckoutManager('checkouts.json')
